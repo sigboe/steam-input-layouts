@@ -1,0 +1,33 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      # WoWDeck's own catalogue parser, pinned to a commit. Bump the ref when
+      # WoWDeck learns a new schemaVersion or contentFormat.
+      - uses: actions/checkout@v4
+        with:
+          repository: sigboe/wowdeck
+          ref: 51e24c65bee34cb88c836da6d804a9a10bd874f5
+          path: wowdeck
+          sparse-checkout: |
+            backend/src/api
+            backend/src/wow/controllerLayouts
+            backend/src/wow/utils
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
+          no-cache: true
+      - run: bun scripts/validate.ts wowdeck
