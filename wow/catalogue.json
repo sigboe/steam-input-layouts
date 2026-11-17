@@ -1,4 +1,20 @@
 {
   "schemaVersion": 1,
-  "layouts": []
+  "layouts": [
+    {
+      "id": "kinzo-wow-forever",
+      "title": "Kinzo WoW Forever",
+      "author": "Kinzo",
+      "description": "My current LayOut",
+      "controllerType": "controller_triton",
+      "publishedFileId": "3810861852",
+      "revisions": [
+        {
+          "number": 61,
+          "sha256": "97cd0c87e6a2cd607519f9d3b2ad9ca0bb61255126e0647b01b7a67b81ed41d5",
+          "contentFormat": 1
+        }
+      ]
+    }
+  ]
 }
