@@ -15,6 +15,21 @@
           "contentFormat": 1
         }
       ]
+    },
+    {
+      "id": "wowdeck-263-9e81861fb29c4551bcfccefd696a6555",
+      "title": "WoWDeck #263 Attribution Test 9e81861fb29c4551bcfccefd696a6555",
+      "author": "sigboe",
+      "description": "Temporary #263 attribution test fixture.",
+      "controllerType": "controller_xbox360",
+      "publishedFileId": "3841861598",
+      "revisions": [
+        {
+          "number": 1,
+          "sha256": "ad2a2bf9ff45e702c7986915b86259380b60fd74dc7034a58ba4c9fa06eab1a9",
+          "contentFormat": 1
+        }
+      ]
     }
   ]
 }
